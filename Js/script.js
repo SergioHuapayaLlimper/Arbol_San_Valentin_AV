@@ -73,10 +73,11 @@ function showDedicationText() {
     //seguidores
     let text = getURLParam("text");
     if (!text) {
-        text = `Para mi mejor amiga:\n\nDesde el primer momento supe que nuestra amistad sería especial.\n 
+        text = `Para Ari:\n\nDesde el primer momento supe que nuestra amistad sería especial.\n 
         Tu risa, tu apoyo y tu forma de escuchar siempre me dan calma.\n
-        Gracias por acompañarme en cada etapa, por comprenderme incluso sin palabras, 
-        y por llenar mis días de alegría sincera.\nTe quiero más de lo que imaginas, siempre y hoy Ari.`;
+        Gracias por acompañarme y soportarme, por comprenderme incluso sin palabras, 
+        y por llenar mis días de la alegría más sincera que alguien puede dar.\n
+        Te quiero más de lo que imaginas, siempre y hoy Ari.`;
     } else {
         text = decodeURIComponent(text).replace(/\\n/g, "\n");
     }
@@ -153,7 +154,7 @@ function showCountdown() {
     let eventParam = getURLParam("event");
     let startDate = startParam
         ? new Date(startParam + "T00:00:00")
-        : new Date("2023-04-20T00:00:00");
+        : new Date("2024-04-20T00:00:00");
     let baseEventDate = eventParam
         ? new Date(eventParam + "T00:00:00")
         : new Date("2026-04-20T00:00:00");
@@ -188,4 +189,5 @@ function showCountdown() {
     }
     update();
     setInterval(update, 1000);
+
 }
